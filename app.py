@@ -4,6 +4,11 @@ import os
 
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return "Flask backend is working!", 200
+
+
 # Read DB credentials from environment variables
 DB_HOST = os.getenv('DB_HOST')
 DB_NAME = os.getenv('DB_NAME')
